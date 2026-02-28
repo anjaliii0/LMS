@@ -1,0 +1,332 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ================= MAIN CONTENT FIX ================= */
+
+.main-content {
+  padding-top: 100px; /* navbar height + spacing */
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background-color: #fcedf7;
+  color: #1f2937;
+}
+
+/* ================= HEADER ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92px;
+  background: linear-gradient(90deg, #1e2d4b, #22355c);
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  z-index: 1000;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar-left h2 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.navbar-left p {
+  color: #d1d5db;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.navbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+
+.container {
+  padding: 40px 48px;
+}
+
+
+/* ================= STATS ================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 34px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 22px 24px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #ede7df;
+}
+
+.stat-card h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stat-card p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ================= CARDS ================= */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px;
+  border: 1px solid #ede7df;
+  margin-bottom: 36px;
+}
+
+/* ================= ADD BOOK ================= */
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #e6dfd6;
+  font-size: 14px;
+  background: #fffdfb;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f28c38;
+  box-shadow: 0 0 0 3px rgba(242, 140, 56, 0.18);
+}
+
+/* ================= BUTTONS ================= */
+.primary-btn {
+  background: #f28c38;
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #ea7c1f;
+}
+
+/* ================= SEARCH ================= */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #e6dfd6;
+  margin: 16px 0 18px;
+  font-size: 14px;
+}
+
+/* ================= TABLE ================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+thead {
+  background: #fbf8f4;
+}
+
+th {
+  text-align: left;
+  padding: 14px;
+  color: #4b5563;
+  font-weight: 600;
+  border-bottom: 1px solid #ede7df;
+}
+
+td {
+  padding: 16px 14px;
+  border-bottom: 1px solid #f1ece5;
+}
+
+tbody tr:hover {
+  background: #fdfbf8;
+}
+
+/* ================= STATUS ================= */
+.badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.available {
+  background: #e6f7ed;
+  color: #1f9254;
+}
+
+.badge.issued {
+  background: #fdecea;
+  color: #c62828;
+}
+
+/* ================= ACTIONS ================= */
+.issue-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid #e6dfd6;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.issue-btn:hover {
+  background: #f5f2ee;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #e11d48;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 120px 20px 30px;
+  }
+}
+.navbar-center {
+  display: flex;
+  gap: 18px;
+}
+
+.navbar-center button {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.navbar-center button:hover {
+  text-decoration: underline;
+}
+
+.username {
+  color: #e5e7eb;
+  margin-right: 14px;
+  font-size: 14px;
+}
+
+/* ================= GREEN SECTION BOX ================= */
+/* ================= NAVBAR BUTTONS ================= */
+
+.navbar-center {
+  display: flex;
+  gap: 14px;
+}
+
+/* Base button */
+.nav-btn {
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Green button for student */
+.nav-btn.green {
+  background: #2e7d32;      /* green box */
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.nav-btn.green:hover {
+  background: #1b5e20;
+  transform: translateY(-1px);
+}
+
+/* Admin button */
+.nav-btn:not(.green) {
+  background: transparent;
+  color: #ffffff;
+}
+
+.nav-btn:not(.green):hover {
+  text-decoration: underline;
+}
+
+
+/* #1b5e20;
